@@ -62,7 +62,7 @@ function App() {
               <img className='h-44 md:min-h-60 flex-shrink-0 mr-2' src={exercicio.imagem} alt={exercicio.nome}/>
               <div className='md:text-2xl flex flex-col justify-center space-y-5 flex-grow'>
                 {exercicio.nome && <p className='items-center font-bold overflow-wrap break-word max-w-32 md:max-w-full'>{exercicio.nome}</p>}
-                <div className='flex flex-row md:flex-col md:items-center flex-wrap justify-start items-start gap-2'>
+                <div className='flex flex-row md:flex-col flex-wrap justify-start items-start md:items-center gap-2'>
                   {exercicio.series && ( 
                     <div className='min-w-40 rounded-full flex flex-row items-center gap-2'>
                       <BiDumbbell size={22}/>
