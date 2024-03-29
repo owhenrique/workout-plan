@@ -28,6 +28,7 @@ function App() {
   };
 
   const treinos = [treinoA, treinoB, treinoC, treinoD];
+  const paginas = treinos.length - 1 
 
   return (
     <>
@@ -51,8 +52,8 @@ function App() {
               <CarouselItem key={index}>{paginaAtual + 1}</CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious onClick={() => trocarPagina(paginaAtual === 0 ? 3 : paginaAtual - 1)} />
-          <CarouselNext onClick={() => trocarPagina(paginaAtual === 3 ? 0 : paginaAtual + 1)} />
+          <CarouselPrevious onClick={() => trocarPagina(paginaAtual === 0 ? paginas : paginaAtual - 1)} />
+          <CarouselNext onClick={() => trocarPagina(paginaAtual === paginas ? 0 : paginaAtual + 1)} />
         </Carousel>
 
         <div className='flex flex-col gap-8'>
