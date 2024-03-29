@@ -1,6 +1,6 @@
-import { aluno } from "@/interfaces/types";
+import { Aluno } from "@/interfaces/types";
 
-const aluno: aluno = {
+const aluno: Aluno = {
     foto: "https://xsgames.co/randomusers/assets/avatars/male/46.jpg",
     sigla: "JD",
     nome: "Jonh Doe",
