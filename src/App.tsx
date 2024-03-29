@@ -38,8 +38,8 @@ function App() {
             <AvatarImage src={aluno.foto}/>
             <AvatarFallback className='text-4xl font-medium'>{aluno.sigla}</AvatarFallback>
           </Avatar>
-          <div className='flex flex-col justify-center items-start'>
-            <h1 className='text-3xl font-bold'>{aluno.nome}</h1>
+          <div className='flex flex-col flex-wrap justify-center items-start'>
+            <h1 className='text-3xl font-bold overflow-wrap break-word max-w-12'>{aluno.nome}</h1>
             <h2 className='text-xl'>{aluno.idade} Anos</h2>
             <h2 className='text-xl'>{aluno.peso} Kilos</h2>
             <h2 className='text-xl'>{aluno.objetivo}</h2>
@@ -52,8 +52,8 @@ function App() {
               <CarouselItem key={index}>{paginaAtual + 1}</CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious onClick={() => trocarPagina(paginaAtual === 0 ? paginas : paginaAtual - 1)} />
-          <CarouselNext onClick={() => trocarPagina(paginaAtual === paginas ? 0 : paginaAtual + 1)} />
+          <CarouselPrevious aria-rowindex={paginaAtual - 1} onClick={() => trocarPagina(paginaAtual === 0 ? paginas : paginaAtual - 1)} />
+          <CarouselNext aria-rowindex={paginaAtual + 1} onClick={() => trocarPagina(paginaAtual === paginas ? 0 : paginaAtual + 1)} />
         </Carousel>
 
         <div className='flex flex-col gap-8'>
